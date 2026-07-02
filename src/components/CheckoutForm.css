@@ -1,0 +1,92 @@
+/* Contenedor del formulario de Stripe */
+.donation-form {
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* Contenedor del elemento de la tarjeta (Stripe iframe) */
+.card-element-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.card-element-container:focus-within {
+  border-color: #2563eb; /* Azul corporativo */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Botón de envío de donación */
+.submit-btn {
+  width: 100%;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.submit-btn:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Mensajes de error */
+.error-message {
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fee2e2;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Pantalla de éxito tras donar */
+.success-message {
+  animation: fadeIn 0.4s ease-out;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.success-message h3 {
+  color: #16a34a; /* Verde de éxito */
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.success-message p {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
